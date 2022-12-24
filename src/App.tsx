@@ -1,29 +1,26 @@
 // import reactLogo from "./assets/Artboard 1.svg";
 import "./App.css";
+import CurrentMood from "./components/CurrentMood/CurrentMood";
+import EmojiSelector from "./components/EmojiSelector/Emoji-selector";
+import MoodSelector from "./components/MoodSelector/MoodSelector";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
       <main className="container">
         <div className="mood-tracker">
-          <nav className="navbar">
-            <div className="navbar-logo"></div>
-            <div className="navbar-title"></div>
-          </nav>
+          <Navbar />
 
-          <h2 className="welcome-message"></h2>
-          <div className="current-mood-display"></div>
+          <h3 className="welcome-message">How are you feeling today Kush ?</h3>
 
-          <div className="emoji-selector"></div>
+          <CurrentMood displayText="Sad" />
+
+          <EmojiSelector />
+
           <hr />
 
-          <div className="mood-selector">
-            <div className="mood-option">Pensive</div>
-            <div className="mood-option">Pensive</div>
-            <div className="mood-option">Pensive</div>
-            <div className="mood-option">Pensive</div>
-            <div className="mood-option">Pensive</div>
-          </div>
+          <MoodSelector />
 
           <button>Proceed</button>
         </div>
