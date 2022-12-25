@@ -1,11 +1,11 @@
 // Import Swiper styles
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./emojiSelector.css";
 
 import emojisList from "../../assets";
+import myEmojiListData from "../EmojiPedia";
 import { useEffect } from "react";
-import Relaxed from "../EmojiPedia/Relaxed";
+import "./emojiSelector.css";
 
 interface Emoji {
   id: number;
@@ -50,13 +50,10 @@ const EmojiSelector = ({
       }}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {/* <SwiperSlide>
-        <Relaxed />
-      </SwiperSlide> */}
-      {emojisList.map((emoji) => {
+      {myEmojiListData.map((emoji) => {
         return (
           <SwiperSlide key={emoji.id}>
-            <img src={emoji.icon} alt={emoji.name} className="emoji" />
+            <emoji.icon height="150px" />
           </SwiperSlide>
         );
       })}
