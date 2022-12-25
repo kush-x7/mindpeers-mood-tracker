@@ -1,6 +1,6 @@
 .container {
   background-color: #f1f6f5;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
   display: flex;
@@ -17,4 +17,14 @@
 .welcome-message {
   margin: 3.8rem 0 2.9rem 0;
   text-align: center;
+}
+
+.curved-line {
+  width: 100%;
+  height: 8rem;
+  border: thick dashed;
+
+  border-color: #e4e4e4 transparent transparent transparent;
+  border-radius: 60%;
+  border-style: dashed;
 }

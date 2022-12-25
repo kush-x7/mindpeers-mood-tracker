@@ -32,7 +32,7 @@ function App() {
             setFeelingsList={setFeelingsList}
           />
 
-          <hr />
+          <div className="curved-line"></div>
 
           <MoodSelector feelingsList={feelingsList} />
 

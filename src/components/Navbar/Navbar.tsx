@@ -9,7 +9,7 @@ const Navbar = () => {
         <HiOutlineArrowLeft className="logo" />
       </div>
 
-      <h2 className="navbar-title">Mood Check-in</h2>
+      <h2 className="navbar-title">Mood Check-In</h2>
     </nav>
   );
 };
