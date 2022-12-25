@@ -15,8 +15,15 @@
   background-color: #2e2e2e;
   padding: 0.9rem 2.1rem 0.88rem 2.2rem;
   border-radius: 2.4rem;
+
+  animation: showText 4s ease-in-out;
 }
 
-/* h5 {
-  transition: all 5.5s ease;
-} */
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

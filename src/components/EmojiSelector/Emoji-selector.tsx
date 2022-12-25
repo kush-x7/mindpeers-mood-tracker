@@ -1,54 +1,40 @@
-// Import Swiper styles
-import "swiper/css";
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 import emojisList from "../../assets";
-
-import { useEffect } from "react";
 import "./emojiSelector.css";
 
-interface Emoji {
-  id: number;
-  name: string;
-}
 interface EmojiSelectorProps {
-  emojisListOfObjects: Array<Emoji>;
   setDisplayMood: (args: string) => void;
   setFeelingsList: (args: Array<{ id: number; name: string }>) => void;
 }
 
 const EmojiSelector = ({
-  emojisListOfObjects,
   setDisplayMood,
   setFeelingsList,
 }: EmojiSelectorProps) => {
   const activeEmojiIndex = 0;
+
+  // First time calling this effect the update mood and feeling data according to the initial emoji
   useEffect(() => {
     setDisplayMood(emojisList[activeEmojiIndex].name);
     setFeelingsList(emojisList[activeEmojiIndex].feelingsList);
-    console.log(emojisList[activeEmojiIndex].feelingsList);
   }, []);
 
   return (
     <Swiper
       centeredSlides={true}
-      spaceBetween={200}
+      spaceBetween={10}
       slidesPerView={3}
       initialSlide={activeEmojiIndex}
-      // effect={"cube"}
-      // onSlideChangeEnd={(swiper) => {
-      //   console.log("Current SLide index " + swiper.activeIndex);
-      //   const displayMood = emojisList[swiper.activeIndex].name;
-      //   setDisplayMood(displayMood);
-      // }}
       onSlideChange={(swiper) => {
-        console.log("Current SLide index " + swiper.activeIndex);
         const displayMood = emojisList[swiper.activeIndex].name;
         setDisplayMood(displayMood);
         setFeelingsList(emojisList[swiper.activeIndex].feelingsList);
-        console.log(displayMood);
+        // console.log(swiper.activeIndex);
       }}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSwiper={(swiper) => console.log(swiper, "kush")}
     >
       {emojisList.map((emoji) => {
         return (
@@ -64,3 +50,6 @@ const EmojiSelector = ({
 };
 
 export default EmojiSelector;
+function getDerivedStateFromProps(props: any, state: any) {
+  throw new Error("Function not implemented.");
+}
