@@ -1,6 +1,7 @@
 /* .emoji-container {
   width: 19.8rem;
   height: 198.1;
+  
 }
 
 .emoji {
@@ -9,5 +10,5 @@
 } */
 
 .emoji-animation {
-  transition: all 0.8s ease-in;
+  transition: all 0.3s ease-in;
 }

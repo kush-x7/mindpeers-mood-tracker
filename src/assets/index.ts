@@ -9,7 +9,7 @@ import emoji9 from "./Artboard 9.svg";
 
 const emojisListOfObjects = [
   {
-    id: 2,
+    id: 1,
     icon: emoji2,
     name: "Relaxed",
     feelingsList: [
@@ -28,43 +28,7 @@ const emojisListOfObjects = [
   },
 
   {
-    id: 9,
-    icon: emoji9,
-    name: "In Love",
-    feelingsList: [
-      { id: 1, name: "Loved" },
-      { id: 2, name: "Adored" },
-      { id: 3, name: "Enamored" },
-
-      { id: 4, name: "Admired" },
-      { id: 5, name: "Cherished" },
-      { id: 6, name: "Devoted" },
-
-      { id: 7, name: "Affectionate" },
-      { id: 8, name: "Passionate" },
-      { id: 9, name: "Fond" },
-    ],
-  },
-  {
-    id: 1,
-    icon: emoji1,
-    name: "Anxious and worried",
-    feelingsList: [
-      { id: 1, name: "Nervous" },
-      { id: 2, name: "Anxious" },
-      { id: 3, name: "Tense" },
-
-      { id: 4, name: "Stressed" },
-      { id: 5, name: "Worried" },
-      { id: 6, name: "Apprehensive" },
-
-      { id: 7, name: "Panicked" },
-      { id: 8, name: "Agitated" },
-      { id: 9, name: "Fretful" },
-    ],
-  },
-  {
-    id: 3,
+    id: 2,
     icon: emoji3,
     name: "Unhappy",
     feelingsList: [
@@ -83,7 +47,7 @@ const emojisListOfObjects = [
   },
 
   {
-    id: 4,
+    id: 3,
     icon: emoji4,
     name: "Angry",
     feelingsList: [
@@ -100,26 +64,27 @@ const emojisListOfObjects = [
       { id: 9, name: "Enraged" },
     ],
   },
+
   {
-    id: 5,
-    icon: emoji5,
-    name: "Annoyed",
+    id: 4,
+    icon: emoji9,
+    name: "In Love",
     feelingsList: [
-      { id: 1, name: "Irritated" },
-      { id: 2, name: "Annoyed" },
-      { id: 3, name: "Frustrated" },
+      { id: 1, name: "Loved" },
+      { id: 2, name: "Adored" },
+      { id: 3, name: "Enamored" },
 
-      { id: 4, name: "Exasperated" },
-      { id: 5, name: "Infuriated" },
-      { id: 6, name: "Irked" },
+      { id: 4, name: "Admired" },
+      { id: 5, name: "Cherished" },
+      { id: 6, name: "Devoted" },
 
-      { id: 7, name: "Bored" },
-      { id: 8, name: "Peeved" },
-      { id: 9, name: "Resentful" },
+      { id: 7, name: "Affectionate" },
+      { id: 8, name: "Passionate" },
+      { id: 9, name: "Fond" },
     ],
   },
   {
-    id: 6,
+    id: 5,
     icon: emoji6,
     name: "Very Excited",
     feelingsList: [
@@ -136,6 +101,44 @@ const emojisListOfObjects = [
       { id: 9, name: "Jubilant" },
     ],
   },
+  {
+    id: 6,
+    icon: emoji1,
+    name: "Anxious and worried",
+    feelingsList: [
+      { id: 1, name: "Nervous" },
+      { id: 2, name: "Anxious" },
+      { id: 3, name: "Tense" },
+
+      { id: 4, name: "Stressed" },
+      { id: 5, name: "Worried" },
+      { id: 6, name: "Apprehensive" },
+
+      { id: 7, name: "Panicked" },
+      { id: 8, name: "Agitated" },
+      { id: 9, name: "Fretful" },
+    ],
+  },
+
+  {
+    id: 7,
+    icon: emoji5,
+    name: "Annoyed",
+    feelingsList: [
+      { id: 1, name: "Irritated" },
+      { id: 2, name: "Annoyed" },
+      { id: 3, name: "Frustrated" },
+
+      { id: 4, name: "Exasperated" },
+      { id: 5, name: "Infuriated" },
+      { id: 6, name: "Irked" },
+
+      { id: 7, name: "Bored" },
+      { id: 8, name: "Peeved" },
+      { id: 9, name: "Resentful" },
+    ],
+  },
+
   {
     id: 8,
     icon: emoji8,

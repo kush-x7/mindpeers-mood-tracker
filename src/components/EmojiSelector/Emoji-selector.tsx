@@ -25,18 +25,34 @@ const EmojiSelector = ({
 
   return (
     <Swiper
-      ref={swiperRef}
+      style={{ overflow: "visible" }}
       centeredSlides={true}
       spaceBetween={10}
       slidesPerView={3}
       initialSlide={activeEmojiIndex}
       onSlideChange={(swiper: any) => {
         const activeSlideIndex = swiper.activeIndex;
-        swiper.slides[activeSlideIndex].style.transform = "scale(1)";
-        swiper.slides[activeSlideIndex - 1].style.transform = "scale(0.8)";
-        swiper.slides[activeSlideIndex + 1].style.transform = "scale(0.8)";
 
-        console.log(swiper.slides[activeSlideIndex]);
+        // reset the scale of all slides to 1
+        swiper.slides.forEach((slide: any) => {
+          slide.style.transform = "scale(1)";
+        });
+
+        // set the scale of the active slide to 1.5
+        swiper.slides[activeSlideIndex].style.transform = "scale(1.5)";
+
+        // checking for undefined
+        if (swiper.slides[activeSlideIndex - 1]) {
+          // set the scale of the previous slide to 0.8
+          swiper.slides[activeSlideIndex - 1].style.transform = "scale(0.8)";
+        }
+
+        if (swiper.slides[activeSlideIndex + 1]) {
+          // set the scale of the next slide to 0.8
+          swiper.slides[activeSlideIndex + 1].style.transform = "scale(0.8)";
+        }
+
+        // console.log(swiper.slides[activeSlideIndex]);
         const displayMood = emojisList[swiper.activeIndex].name;
         setDisplayMood(displayMood);
         setFeelingsList(emojisList[swiper.activeIndex].feelingsList);
