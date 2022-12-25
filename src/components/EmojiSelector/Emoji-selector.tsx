@@ -39,17 +39,22 @@ const EmojiSelector = ({
         });
 
         // set the scale of the active slide to 1.5
-        swiper.slides[activeSlideIndex].style.transform = "scale(1.5)";
+        swiper.slides[activeSlideIndex].style.transform =
+          "scale(1.5) translateY(-20%)";
+
+        // swiper.slide.style.transform = "translateY(-30%)";
 
         // checking for undefined
         if (swiper.slides[activeSlideIndex - 1]) {
           // set the scale of the previous slide to 0.8
-          swiper.slides[activeSlideIndex - 1].style.transform = "scale(0.8)";
+          swiper.slides[activeSlideIndex - 1].style.transform = "scale(0.8) ";
+          // swiper.slide.style.transform = " translateY(30%)";
         }
 
         if (swiper.slides[activeSlideIndex + 1]) {
           // set the scale of the next slide to 0.8
-          swiper.slides[activeSlideIndex + 1].style.transform = "scale(0.8)";
+          swiper.slides[activeSlideIndex + 1].style.transform = "scale(0.8) ";
+          // swiper.slide.style.transform = " translateY(30%)";
         }
 
         // console.log(swiper.slides[activeSlideIndex]);
