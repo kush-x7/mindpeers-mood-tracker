@@ -28,7 +28,6 @@ function App() {
           <CurrentMood displayText={displayMood} />
 
           <EmojiSelector
-            emojisListOfObjects={emojisListOfObjects}
             setDisplayMood={setDisplayMood}
             setFeelingsList={setFeelingsList}
           />
