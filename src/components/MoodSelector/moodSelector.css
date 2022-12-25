@@ -1,5 +1,6 @@
 .mood-section {
   padding: 0 4rem 4rem 4rem;
+  transform: translateY(-6%);
 }
 .mood-section--title {
   margin-bottom: 3.268rem;
