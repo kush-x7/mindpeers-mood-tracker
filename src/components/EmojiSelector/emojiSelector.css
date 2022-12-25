@@ -7,3 +7,7 @@
   height: 100%;
   width: 100%;
 } */
+
+.emoji-animation {
+  transition: all 0.8s ease-in;
+}
