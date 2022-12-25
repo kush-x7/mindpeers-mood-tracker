@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -14,8 +14,7 @@ const EmojiSelector = ({
   setDisplayMood,
   setFeelingsList,
 }: EmojiSelectorProps) => {
-  const activeEmojiIndex = 1;
-  const swiperRef = useRef(null);
+  const activeEmojiIndex = 0;
 
   // First time calling this effect the update mood and feeling data according to the initial emoji
   useEffect(() => {
@@ -25,45 +24,45 @@ const EmojiSelector = ({
 
   return (
     <Swiper
-      style={{ overflow: "visible" }}
+      style={{ overflow: "visible", overflowX: "clip" }}
       centeredSlides={true}
       spaceBetween={10}
       slidesPerView={3}
       initialSlide={activeEmojiIndex}
-      onSlideChange={(swiper: any) => {
-        const activeSlideIndex = swiper.activeIndex;
+      /////////////////////////////////////////////////////////
+      // onTouchMove={(swiper: any) => {
+      //   // get the active slide index
+      //   const activeSlideIndex = swiper.activeIndex;
 
-        // reset the scale of all slides to 1
+      //   // get the distance of the active slide from the center
+      //   const distanceFromCenter = Math.abs(swiper.translate);
+
+      //   // set the scale of the active slide based on the distance from the center
+      //   // a higher distance results in a larger scale
+      //   swiper.slides[activeSlideIndex].style.transform = `scale(${
+      //     1 + distanceFromCenter * 0.01
+      //   })`;
+      // }}
+      // onSlideChange={(swiper: any) => {
+      //   // reset the scale of all slides to 1
+      //   swiper.slides.forEach((slide: any) => {
+      //     slide.style.transform = "scale(1)";
+      //   });
+      // }}
+      //////////////////////////////
+      onSlideChange={(swiper: any) => {
+        // In the start reset the scale of all slides to 1
         swiper.slides.forEach((slide: any) => {
-          slide.style.transform = "scale(1)";
+          slide.style.transform = "scale(0.8)";
         });
 
-        // set the scale of the active slide to 1.5
-        swiper.slides[activeSlideIndex].style.transform =
-          "scale(1.5) translateY(-20%)";
+        // set the scale of the active slide to 1.25
+        swiper.slides[swiper.activeIndex].style.transform = "scale(1.25)";
 
-        // swiper.slide.style.transform = "translateY(-30%)";
-
-        // checking for undefined
-        if (swiper.slides[activeSlideIndex - 1]) {
-          // set the scale of the previous slide to 0.8
-          swiper.slides[activeSlideIndex - 1].style.transform = "scale(0.8) ";
-          // swiper.slide.style.transform = " translateY(30%)";
-        }
-
-        if (swiper.slides[activeSlideIndex + 1]) {
-          // set the scale of the next slide to 0.8
-          swiper.slides[activeSlideIndex + 1].style.transform = "scale(0.8) ";
-          // swiper.slide.style.transform = " translateY(30%)";
-        }
-
-        // console.log(swiper.slides[activeSlideIndex]);
         const displayMood = emojisList[swiper.activeIndex].name;
         setDisplayMood(displayMood);
         setFeelingsList(emojisList[swiper.activeIndex].feelingsList);
-        // console.log(swiper.activeIndex);
       }}
-      onSwiper={(swiper) => console.log(swiper, "kush")}
     >
       {emojisList.map((emoji) => {
         return (
