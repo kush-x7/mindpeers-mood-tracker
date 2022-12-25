@@ -7,8 +7,6 @@ import MoodSelector from "./components/MoodSelector/MoodSelector";
 import Navbar from "./components/Navbar/Navbar";
 import emojisListOfObjects from "./assets";
 import Button from "./components/Button/Button";
-import Relaxed from "./components/EmojiPedia/Relaxed";
-import logo from "./assets/Artboard 2.svg";
 
 function App() {
   const [displayMood, setDisplayMood] = useState<string>("");
@@ -25,8 +23,6 @@ function App() {
         <div className="mood-tracker">
           <Navbar />
 
-          <Relaxed />
-          <img src={logo} alt="" />
           <h3 className="welcome-message">How are you feeling today Kush ?</h3>
 
           <CurrentMood displayText={displayMood} />

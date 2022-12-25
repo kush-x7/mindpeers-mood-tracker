@@ -3,7 +3,7 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import emojisList from "../../assets";
-import myEmojiListData from "../EmojiPedia";
+
 import { useEffect } from "react";
 import "./emojiSelector.css";
 
@@ -50,10 +50,12 @@ const EmojiSelector = ({
       }}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {myEmojiListData.map((emoji) => {
+      {emojisList.map((emoji) => {
         return (
           <SwiperSlide key={emoji.id}>
-            <emoji.icon height="150px" />
+            <div className="emoji-container">
+              <img src={emoji.icon} alt="logo" className="emoji" />
+            </div>
           </SwiperSlide>
         );
       })}
