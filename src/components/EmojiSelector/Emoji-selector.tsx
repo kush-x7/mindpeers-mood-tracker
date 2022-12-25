@@ -6,15 +6,26 @@ import "./emojiSelector.css";
 import emojisList from "../../assets";
 import { useEffect } from "react";
 
+interface Emoji {
+  id: number;
+  name: string;
+}
 interface EmojiSelectorProps {
+  emojisListOfObjects: Array<Emoji>;
   setDisplayMood: (args: string) => void;
+  setFeelingsList: (args: Array<{ id: number; name: string }>) => void;
 }
 
-const EmojiSelector = ({ setDisplayMood }: EmojiSelectorProps) => {
+const EmojiSelector = ({
+  emojisListOfObjects,
+  setDisplayMood,
+  setFeelingsList,
+}: EmojiSelectorProps) => {
   const activeEmojiIndex = 0;
-
   useEffect(() => {
-    setDisplayMood(emojisList[0].name);
+    setDisplayMood(emojisList[activeEmojiIndex].name);
+    setFeelingsList(emojisList[activeEmojiIndex].feelingsList);
+    console.log(emojisList[activeEmojiIndex].feelingsList);
   }, []);
 
   return (
@@ -33,6 +44,7 @@ const EmojiSelector = ({ setDisplayMood }: EmojiSelectorProps) => {
         console.log("Current SLide index " + swiper.activeIndex);
         const displayMood = emojisList[swiper.activeIndex].name;
         setDisplayMood(displayMood);
+        setFeelingsList(emojisList[swiper.activeIndex].feelingsList);
         console.log(displayMood);
       }}
       onSwiper={(swiper) => console.log(swiper)}

@@ -5,9 +5,17 @@ import CurrentMood from "./components/CurrentMood/CurrentMood";
 import EmojiSelector from "./components/EmojiSelector/Emoji-selector";
 import MoodSelector from "./components/MoodSelector/MoodSelector";
 import Navbar from "./components/Navbar/Navbar";
+import emojisListOfObjects from "./assets";
 
 function App() {
   const [displayMood, setDisplayMood] = useState<string>("");
+
+  interface feelingListArgs {
+    id: number;
+    name: string;
+  }
+  const [feelingsList, setFeelingsList] = useState<feelingListArgs[]>([]);
+
   return (
     <>
       <main className="container">
@@ -18,11 +26,15 @@ function App() {
 
           <CurrentMood displayText={displayMood} />
 
-          <EmojiSelector setDisplayMood={setDisplayMood} />
+          <EmojiSelector
+            emojisListOfObjects={emojisListOfObjects}
+            setDisplayMood={setDisplayMood}
+            setFeelingsList={setFeelingsList}
+          />
 
           <hr />
 
-          <MoodSelector />
+          <MoodSelector feelingsList={feelingsList} />
 
           <button>Proceed</button>
         </div>
