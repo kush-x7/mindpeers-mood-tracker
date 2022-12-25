@@ -1,7 +1,7 @@
 .button-container {
   display: flex;
   justify-content: center;
-  padding: 0 4rem;
+  padding: 0 4rem 4.7rem;
 }
 
 .button {
