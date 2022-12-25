@@ -6,6 +6,7 @@ import EmojiSelector from "./components/EmojiSelector/Emoji-selector";
 import MoodSelector from "./components/MoodSelector/MoodSelector";
 import Navbar from "./components/Navbar/Navbar";
 import emojisListOfObjects from "./assets";
+import Button from "./components/Button/Button";
 
 function App() {
   const [displayMood, setDisplayMood] = useState<string>("");
@@ -36,7 +37,7 @@ function App() {
 
           <MoodSelector feelingsList={feelingsList} />
 
-          <button>Proceed</button>
+          <Button />
         </div>
       </main>
     </>
