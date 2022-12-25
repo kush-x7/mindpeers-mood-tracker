@@ -7,9 +7,11 @@ interface CurrentMoodProps {
 const CurrentMood = ({ displayText }: CurrentMoodProps) => {
   return (
     <div className="mood-display ">
-      <div className="current-mood">
-        <h5 className="mood-text">{displayText}</h5>
-      </div>
+      {displayText && (
+        <div className="current-mood">
+          <h5 className="mood-text">{displayText}</h5>
+        </div>
+      )}
     </div>
   );
 };

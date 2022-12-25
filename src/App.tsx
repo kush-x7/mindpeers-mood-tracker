@@ -1,4 +1,5 @@
 // import reactLogo from "./assets/Artboard 1.svg";
+import { useState } from "react";
 import "./App.css";
 import CurrentMood from "./components/CurrentMood/CurrentMood";
 import EmojiSelector from "./components/EmojiSelector/Emoji-selector";
@@ -6,6 +7,7 @@ import MoodSelector from "./components/MoodSelector/MoodSelector";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
+  const [displayMood, setDisplayMood] = useState<string>("");
   return (
     <>
       <main className="container">
@@ -14,9 +16,9 @@ function App() {
 
           <h3 className="welcome-message">How are you feeling today Kush ?</h3>
 
-          <CurrentMood displayText="Sad" />
+          <CurrentMood displayText={displayMood} />
 
-          <EmojiSelector />
+          <EmojiSelector setDisplayMood={setDisplayMood} />
 
           <hr />
 
