@@ -14,7 +14,7 @@ const MoodSelector = ({ feelingsList }: any) => {
     <>
       <section className="mood-section">
         <h3 className="mood-section--title">Are you also feeling?</h3>
-        <button onClick={handleClick}>click me</button>
+        {/* <button onClick={handleClick}>click me</button> */}
         <div className="mood-list ">
           {feelingsList.map((feeling: any) => {
             console.log(feeling);
