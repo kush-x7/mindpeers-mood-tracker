@@ -5,6 +5,7 @@ import "./emojiSelector.css";
 
 import emojisList from "../../assets";
 import { useEffect } from "react";
+import Relaxed from "../EmojiPedia/Relaxed";
 
 interface Emoji {
   id: number;
@@ -49,6 +50,9 @@ const EmojiSelector = ({
       }}
       onSwiper={(swiper) => console.log(swiper)}
     >
+      {/* <SwiperSlide>
+        <Relaxed />
+      </SwiperSlide> */}
       {emojisList.map((emoji) => {
         return (
           <SwiperSlide key={emoji.id}>
