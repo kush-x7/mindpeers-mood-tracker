@@ -8,23 +8,27 @@ import "./emojiSelector.css";
 interface EmojiSelectorProps {
   setDisplayMood: (args: string) => void;
   setFeelingsList: (args: Array<{ id: number; name: string }>) => void;
+  setEmojiBgColor: (args: string) => void;
 }
 
 const EmojiSelector = ({
   setDisplayMood,
   setFeelingsList,
+  setEmojiBgColor,
 }: EmojiSelectorProps) => {
-  const activeEmojiIndex = 1;
+  const activeEmojiIndex = 0;
 
   // First time calling this effect the update mood and feeling data according to the initial emoji
   useEffect(() => {
     setDisplayMood(emojisList[activeEmojiIndex].name);
     setFeelingsList(emojisList[activeEmojiIndex].feelingsList);
+    setEmojiBgColor(emojisList[activeEmojiIndex].bgColor);
   }, []);
 
   return (
     <Swiper
       style={{ overflow: "visible", overflowX: "clip" }}
+      className="swiper-container"
       centeredSlides={true}
       spaceBetween={10}
       slidesPerView={3}
@@ -62,12 +66,13 @@ const EmojiSelector = ({
         const displayMood = emojisList[swiper.activeIndex].name;
         setDisplayMood(displayMood);
         setFeelingsList(emojisList[swiper.activeIndex].feelingsList);
+        setEmojiBgColor(emojisList[swiper.activeIndex].bgColor);
       }}
     >
       {emojisList.map((emoji) => {
         return (
           <SwiperSlide key={emoji.id} className="emoji-animation">
-            <div className="emoji-container">
+            <div className="emoji-container ">
               <img src={emoji.icon} alt="logo" className="emoji" />
             </div>
           </SwiperSlide>

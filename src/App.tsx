@@ -1,15 +1,14 @@
-// import reactLogo from "./assets/Artboard 1.svg";
-import { useState } from "react";
-import "./App.css";
-import CurrentMood from "./components/CurrentMood/CurrentMood";
 import EmojiSelector from "./components/EmojiSelector/Emoji-selector";
 import MoodSelector from "./components/MoodSelector/MoodSelector";
+import CurrentMood from "./components/CurrentMood/CurrentMood";
+import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import emojisListOfObjects from "./assets";
 import Button from "./components/Button/Button";
+import "./App.css";
 
 function App() {
   const [displayMood, setDisplayMood] = useState<string>("");
+  const [emojiBgColor, setEmojiBgColor] = useState<string>("");
 
   interface feelingListArgs {
     id: number;
@@ -27,9 +26,14 @@ function App() {
 
           <CurrentMood displayText={displayMood} />
 
+          <div
+            className="background-color"
+            style={{ backgroundColor: emojiBgColor }}
+          ></div>
           <EmojiSelector
             setDisplayMood={setDisplayMood}
             setFeelingsList={setFeelingsList}
+            setEmojiBgColor={setEmojiBgColor}
           />
 
           <div className="curved-line"></div>

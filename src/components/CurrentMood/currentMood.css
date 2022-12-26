@@ -1,11 +1,12 @@
 .mood-display {
   display: flex;
   justify-content: center;
-  margin-bottom: 9.244rem;
+  margin-bottom: 7.244rem;
 }
 .current-mood {
   border-radius: 2.4rem;
   padding: 0.2rem;
+  z-index: 10;
 
   background: transparent linear-gradient(121deg, #16a9b1 0%, #b5d654 100%) 0%
     0% no-repeat padding-box;

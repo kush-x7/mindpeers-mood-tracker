@@ -12,6 +12,7 @@ const emojisListOfObjects = [
     id: 1,
     icon: emoji2,
     name: "Relaxed",
+    bgColor: "#ffc35a",
     feelingsList: [
       { id: 1, name: "Content" },
       { id: 2, name: "Relaxed" },
@@ -28,6 +29,7 @@ const emojisListOfObjects = [
     id: 2,
     icon: emoji3,
     name: "Unhappy",
+    bgColor: "#82AAE3",
     feelingsList: [
       { id: 1, name: "Melancholic" },
       { id: 2, name: "Unhappy" },
@@ -44,18 +46,17 @@ const emojisListOfObjects = [
     id: 3,
     icon: emoji4,
     name: "Angry",
+    bgColor: "#DC0000",
     feelingsList: [
       { id: 1, name: "Furious" },
-      { id: 2, name: "Angry" },
-      { id: 3, name: "Irritated" },
+      { id: 2, name: "Irritated" },
 
-      { id: 4, name: "Annoyed" },
-      { id: 5, name: "Frustrated" },
-      { id: 6, name: "Mad" },
+      { id: 3, name: "Annoyed" },
+      { id: 4, name: "Frustrated" },
 
-      { id: 7, name: "Infuriated" },
-      { id: 8, name: "Exasperated" },
-      { id: 9, name: "Enraged" },
+      { id: 5, name: "Infuriated" },
+      { id: 6, name: "Enraged" },
+      { id: 7, name: "Exasperated" },
     ],
   },
 
@@ -63,6 +64,7 @@ const emojisListOfObjects = [
     id: 4,
     icon: emoji9,
     name: "In Love",
+    bgColor: "#F49D1A",
     feelingsList: [
       { id: 1, name: "Loved" },
       { id: 2, name: "Adored" },
@@ -81,6 +83,7 @@ const emojisListOfObjects = [
     id: 5,
     icon: emoji6,
     name: "Very Excited",
+    bgColor: "#FFE15D",
     feelingsList: [
       { id: 1, name: "Thrilled" },
       { id: 2, name: "Excited" },
@@ -99,6 +102,7 @@ const emojisListOfObjects = [
     id: 6,
     icon: emoji1,
     name: "Anxious and worried",
+    bgColor: "#FFB100",
     feelingsList: [
       { id: 1, name: "Nervous" },
       { id: 2, name: "Anxious" },
@@ -106,11 +110,10 @@ const emojisListOfObjects = [
 
       { id: 4, name: "Stressed" },
       { id: 5, name: "Worried" },
-      { id: 6, name: "Apprehensive" },
 
-      { id: 7, name: "Panicked" },
-      { id: 8, name: "Agitated" },
-      { id: 9, name: "Fretful" },
+      { id: 6, name: "Fretful" },
+      { id: 7, name: "Agitated" },
+      { id: 8, name: "Panicked" },
     ],
   },
 
@@ -118,6 +121,7 @@ const emojisListOfObjects = [
     id: 7,
     icon: emoji5,
     name: "Annoyed",
+    bgColor: "#810CA8",
     feelingsList: [
       { id: 1, name: "Irritated" },
       { id: 2, name: "Annoyed" },
@@ -137,17 +141,17 @@ const emojisListOfObjects = [
     id: 8,
     icon: emoji8,
     name: "Nauseated",
+    bgColor: "#54B435",
     feelingsList: [
-      { id: 1, name: "Queasy" },
       { id: 2, name: "Nauseated" },
+      { id: 1, name: "Queasy" },
+      { id: 8, name: "Unwell" },
       { id: 3, name: "Sick" },
-
-      { id: 4, name: "Ill" },
       { id: 5, name: "Nauseated" },
+
       { id: 6, name: "Faint" },
 
       { id: 7, name: "Dizzy" },
-      { id: 8, name: "Unwell" },
       { id: 9, name: "Grim" },
     ],
   },
