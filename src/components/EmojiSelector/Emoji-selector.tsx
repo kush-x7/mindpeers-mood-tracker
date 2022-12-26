@@ -33,27 +33,6 @@ const EmojiSelector = ({
       spaceBetween={10}
       slidesPerView={3}
       initialSlide={activeEmojiIndex}
-      /////////////////////////////////////////////////////////
-      // onTouchMove={(swiper: any) => {
-      //   // get the active slide index
-      //   const activeSlideIndex = swiper.activeIndex;
-
-      //   // get the distance of the active slide from the center
-      //   const distanceFromCenter = Math.abs(swiper.translate);
-
-      //   // set the scale of the active slide based on the distance from the center
-      //   // a higher distance results in a larger scale
-      //   swiper.slides[activeSlideIndex].style.transform = `scale(${
-      //     1 + distanceFromCenter * 0.01
-      //   })`;
-      // }}
-      // onSlideChange={(swiper: any) => {
-      //   // reset the scale of all slides to 1
-      //   swiper.slides.forEach((slide: any) => {
-      //     slide.style.transform = "scale(1)";
-      //   });
-      // }}
-      //////////////////////////////
       onSlideChange={(swiper: any) => {
         // In the start reset the scale of all slides to 1
         swiper.slides.forEach((slide: any) => {
@@ -83,6 +62,3 @@ const EmojiSelector = ({
 };
 
 export default EmojiSelector;
-function getDerivedStateFromProps(props: any, state: any) {
-  throw new Error("Function not implemented.");
-}
