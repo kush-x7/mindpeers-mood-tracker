@@ -19,33 +19,29 @@ function App() {
   const [feelingsList, setFeelingsList] = useState<feelingListArgs[]>([]);
 
   return (
-    <>
-      <main className="container">
-        <div className="mood-tracker">
-          <Navbar />
+    <main className="container">
+      <div className="mood-tracker">
+        <Navbar />
+        <h3 className="welcome-message">How are you feeling today Kush ?</h3>
+        <CurrentMood displayText={displayMood} />
 
-          <h3 className="welcome-message">How are you feeling today Kush ?</h3>
+        <div
+          className="background-color"
+          style={{ backgroundColor: emojiBgColor }}
+        ></div>
 
-          <CurrentMood displayText={displayMood} />
+        <EmojiSelector
+          setDisplayMood={setDisplayMood}
+          setFeelingsList={setFeelingsList}
+          setEmojiBgColor={setEmojiBgColor}
+        />
 
-          <div
-            className="background-color"
-            style={{ backgroundColor: emojiBgColor }}
-          ></div>
-          <EmojiSelector
-            setDisplayMood={setDisplayMood}
-            setFeelingsList={setFeelingsList}
-            setEmojiBgColor={setEmojiBgColor}
-          />
+        <div className="curved-line"></div>
 
-          <div className="curved-line"></div>
-
-          <MoodSelector feelingsList={feelingsList} />
-
-          <Button />
-        </div>
-      </main>
-    </>
+        <MoodSelector feelingsList={feelingsList} />
+        <Button />
+      </div>
+    </main>
   );
 }
 

@@ -6,6 +6,7 @@ interface CurrentMoodProps {
 }
 
 const CurrentMood = ({ displayText }: CurrentMoodProps) => {
+  // To Animate mood-text
   const [myAnimation, setMyAnimation] = useState<string>("");
 
   useEffect(() => {
