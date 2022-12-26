@@ -12,10 +12,6 @@
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 1.7rem;
   grid-column-gap: 0.25rem;
-
-  /* background-color: bisque; */
-
-  /* padding: 4rem; */
 }
 
 .mood-item {
