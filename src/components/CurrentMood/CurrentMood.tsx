@@ -12,7 +12,7 @@ const CurrentMood = ({ displayText }: CurrentMoodProps) => {
     setMyAnimation("animate-text");
     setTimeout(() => {
       setMyAnimation("");
-    }, 1000);
+    }, 550);
   }, [displayText]);
 
   return (

@@ -36,3 +36,35 @@
 
   box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.789);
 }
+
+.animate-text {
+  animation: animate-text 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes animate-text {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.scale-up-center {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
