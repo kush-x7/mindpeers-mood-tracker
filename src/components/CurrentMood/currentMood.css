@@ -9,21 +9,31 @@
 
   background: transparent linear-gradient(121deg, #16a9b1 0%, #b5d654 100%) 0%
     0% no-repeat padding-box;
+  /* animation: text-appear-animation 1s ease-in-out forwards; */
 }
 
 .mood-text {
   background-color: #2e2e2e;
   padding: 0.9rem 2.1rem 0.88rem 2.2rem;
   border-radius: 2.4rem;
-
-  animation: showText 4s ease-in-out;
 }
 
-@keyframes showText {
-  from {
+.tracking-in-expand-fwd {
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
     opacity: 0;
   }
-  to {
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
     opacity: 1;
   }
 }
