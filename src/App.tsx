@@ -1,9 +1,11 @@
-import EmojiSelector from "./components/EmojiSelector/Emoji-selector";
-import MoodSelector from "./components/MoodSelector/MoodSelector";
-import CurrentMood from "./components/CurrentMood/CurrentMood";
 import { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Button from "./components/Button/Button";
+import {
+  Navbar,
+  CurrentMood,
+  EmojiSelector,
+  MoodSelector,
+  Button,
+} from "./components";
 import "./App.css";
 
 function App() {
