@@ -18,7 +18,7 @@ const CurrentMood = ({ displayText }: CurrentMoodProps) => {
   return (
     <div className="mood-display ">
       {displayText && (
-        <div className={`current-mood ${myAnimation}`}>
+        <div className={`current-mood  color-change-2x ${myAnimation}`}>
           <h5 className="mood-text">{displayText}</h5>
         </div>
       )}
