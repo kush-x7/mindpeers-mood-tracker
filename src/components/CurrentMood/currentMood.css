@@ -16,6 +16,12 @@
   background-color: #2e2e2e;
   padding: 0.9rem 2.1rem 0.88rem 2.2rem;
   border-radius: 2.4rem;
+
+  /* prevent text selection on mobile devices */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tracking-in-expand-fwd {

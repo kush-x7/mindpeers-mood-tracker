@@ -14,7 +14,7 @@ const EmojiSelector = ({
   setDisplayMood,
   setFeelingsList,
 }: EmojiSelectorProps) => {
-  const activeEmojiIndex = 0;
+  const activeEmojiIndex = 1;
 
   // First time calling this effect the update mood and feeling data according to the initial emoji
   useEffect(() => {

@@ -14,16 +14,13 @@ const emojisListOfObjects = [
     name: "Relaxed",
     feelingsList: [
       { id: 1, name: "Content" },
-      { id: 2, name: "At peace" },
-      { id: 3, name: "Laid-back" },
+      { id: 2, name: "Relaxed" },
+      { id: 3, name: "Comfortable" },
+      { id: 4, name: "At peace" },
 
-      { id: 4, name: "Unhurried" },
-      { id: 5, name: "Comfortable" },
-      { id: 6, name: "Relaxed" },
-
+      { id: 5, name: "Unhurried" },
+      { id: 6, name: "Laid-back" },
       { id: 7, name: "Easygoing" },
-      { id: 8, name: "Unstressed" },
-      { id: 9, name: "Chill" },
     ],
   },
 
@@ -32,17 +29,14 @@ const emojisListOfObjects = [
     icon: emoji3,
     name: "Unhappy",
     feelingsList: [
-      { id: 1, name: "Sad" },
+      { id: 1, name: "Melancholic" },
       { id: 2, name: "Unhappy" },
-      { id: 3, name: "Depressed" },
+      { id: 3, name: "Mixserable" },
+      { id: 4, name: "Despondent" },
+      { id: 5, name: "Depressed" },
 
-      { id: 4, name: "Down" },
-      { id: 5, name: "Glum" },
-      { id: 6, name: "Despondent" },
-
-      { id: 7, name: "Disheartened" },
-      { id: 8, name: "Miserable" },
-      { id: 9, name: "Melancholic" },
+      { id: 6, name: "Down" },
+      { id: 7, name: "Glum" },
     ],
   },
 
