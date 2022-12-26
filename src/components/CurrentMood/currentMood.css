@@ -25,12 +25,11 @@
   user-select: none;
 }
 
-.tracking-in-expand-fwd {
-  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
-    both;
+.animate-text {
+  animation: animate-text 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-@keyframes tracking-in-expand-fwd {
+@keyframes animate-text {
   0% {
     letter-spacing: -0.5em;
     transform: translateZ(-700px);

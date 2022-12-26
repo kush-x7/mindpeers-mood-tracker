@@ -82,7 +82,7 @@ const emojisListOfObjects = [
   {
     id: 5,
     icon: emoji6,
-    name: "Very Excited",
+    name: "Excited",
     bgColor: "#FFE15D",
     feelingsList: [
       { id: 1, name: "Thrilled" },
@@ -101,7 +101,7 @@ const emojisListOfObjects = [
   {
     id: 6,
     icon: emoji1,
-    name: "Anxious and worried",
+    name: "Worried",
     bgColor: "#FFB100",
     feelingsList: [
       { id: 1, name: "Nervous" },

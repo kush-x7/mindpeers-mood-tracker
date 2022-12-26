@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./currentMood.css";
 
 interface CurrentMoodProps {
@@ -5,10 +6,19 @@ interface CurrentMoodProps {
 }
 
 const CurrentMood = ({ displayText }: CurrentMoodProps) => {
+  const [myAnimation, setMyAnimation] = useState<string>("");
+
+  useEffect(() => {
+    setMyAnimation("animate-text");
+    setTimeout(() => {
+      setMyAnimation("");
+    }, 1000);
+  }, [displayText]);
+
   return (
     <div className="mood-display ">
       {displayText && (
-        <div className={`current-mood tracking-in-expand-fwd`}>
+        <div className={`current-mood ${myAnimation}`}>
           <h5 className="mood-text">{displayText}</h5>
         </div>
       )}
